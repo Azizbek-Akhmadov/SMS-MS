@@ -7,27 +7,16 @@ It is important to note that the program included a launch file that facilitates
 
 ## weatherCallback
 
-'''python
-
-#include <ros/ros.h>
-#include <std_msgs/String.h>
-#include <smart_mobility_service/Weather.h>
-
-void weatherCallback(const smart_mobility_service::Weather::ConstPtr& msg) {
-    ROS_INFO("Current weather: %s", msg->status.c_str());
-}
-
-int main(int argc, char **argv) {
-    ros::init(argc, argv, "weather_service_server");
-    ros::NodeHandle n;
-
-    ros::ServiceServer service = n.advertiseService("weather_service", weatherCallback);
-    ROS_INFO("Ready to receive GPS location and send weather status");
-
-    ros::spin();
-
-    return 0;
-}
-
 This code creates a ROS service server that listens to a service called "weather_service". When a request is received, the weatherCallback function is called, which simply prints the current weather status.
 
+## publisher
+
+This code creates a ROS publisher that publishes the speed of the vehicle to a topic called "speed_topic". In this example, the speed is incremented by 0.1 every iteration of the loop, but in a real-world scenario, the speed would be obtained from the autonomous vehicle's sensors.
+
+##subscriber
+
+This code creates a ROS subscriber that listens to the "speed_topic" topic and calls the callback function when a message is received. If the speed in the message exceeds the speed_limit parameter (which is obtained from the ROS parameter server), the plate number of the vehicle is sent to the "speed_monitor" dynamic reconfigure server. Otherwise, a message is simply logged to the console.
+
+##speed_limit
+
+To launch the subscriber and publisher nodes, and set the value of the speed_limit parameter, you can create a launch file like this:
