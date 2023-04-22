@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/james77/Desktop/SMS-Lab/Mid_term-Project/smart_city/build'
+export PWD='/Azizbek'
