@@ -39,7 +39,7 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/james77/Desktop/SMS-Lab/Mid_term-Project/smart_city/build/CMakeFiles/CMakeTmp
+Change Dir: /Azizbek
 
 Run Build Command(s):/usr/bin/make cmTC_1d8ef/fast && /usr/bin/make -f CMakeFiles/cmTC_1d8ef.dir/build.make CMakeFiles/cmTC_1d8ef.dir/build
 make[1]: Entering directory '/home/james77/Desktop/SMS-Lab/Mid_term-Project/smart_city/build/CMakeFiles/CMakeTmp'
@@ -51,7 +51,7 @@ Linking C executable cmTC_1d8ef
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
 make[1]: *** [CMakeFiles/cmTC_1d8ef.dir/build.make:87: cmTC_1d8ef] Error 1
-make[1]: Leaving directory '/home/james77/Desktop/SMS-Lab/Mid_term-Project/smart_city/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/Azizbek'
 make: *** [Makefile:121: cmTC_1d8ef/fast] Error 2
 
 
