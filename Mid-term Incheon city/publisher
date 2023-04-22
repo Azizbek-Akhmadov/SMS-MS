@@ -1,0 +1,27 @@
+#include <ros/ros.h>
+#include <std_msgs/Float32.h>
+
+int main(int argc, char **argv) {
+    ros::init(argc, argv, "speed_publisher");
+    ros::NodeHandle n;
+
+    ros::Publisher pub = n.advertise<std_msgs::Float32>("speed_topic", 1000);
+
+    ros::Rate loop_rate(10);
+
+    float speed = 0.0;
+    while (ros::ok()) {
+        std_msgs::Float32 msg;
+        msg.data = speed;
+
+        ROS_INFO("Speed: %f", msg.data);
+
+        pub.publish(msg);
+
+        speed += 0.1;
+
+        loop_rate.sleep();
+    }
+
+    return 0;
+}
