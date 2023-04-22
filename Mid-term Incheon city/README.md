@@ -6,25 +6,4 @@ Additionally, the publisher-and-subscriber nodes' second functionality is simila
 It is important to note that the program included a launch file that facilitates the automatic execution of the subscriber and publisher nodes while also setting the speed_limit server parameter's value.
 
 ****weatherCallback****
-
-
-#include <ros/ros.h>
-#include <std_msgs/String.h>
-#include <smart_mobility_service/Weather.h>
-
-void weatherCallback(const smart_mobility_service::Weather::ConstPtr& msg) {
-    ROS_INFO("Current weather: %s", msg->status.c_str());
-}
-
-int main(int argc, char **argv) {
-    ros::init(argc, argv, "weather_service_server");
-    ros::NodeHandle n;
-
-    ros::ServiceServer service = n.advertiseService("weather_service", weatherCallback);
-    ROS_INFO("Ready to receive GPS location and send weather status");
-
-    ros::spin();
-
-    return 0;
-}
-
+!
