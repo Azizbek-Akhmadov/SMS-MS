@@ -13,10 +13,10 @@ This code creates a ROS service server that listens to a service called "weather
 
 This code creates a ROS publisher that publishes the speed of the vehicle to a topic called "speed_topic". In this example, the speed is incremented by 0.1 every iteration of the loop, but in a real-world scenario, the speed would be obtained from the autonomous vehicle's sensors.
 
-##subscriber
+## subscriber
 
 This code creates a ROS subscriber that listens to the "speed_topic" topic and calls the callback function when a message is received. If the speed in the message exceeds the speed_limit parameter (which is obtained from the ROS parameter server), the plate number of the vehicle is sent to the "speed_monitor" dynamic reconfigure server. Otherwise, a message is simply logged to the console.
 
-##speed_limit
+## speed_limit
 
 To launch the subscriber and publisher nodes, and set the value of the speed_limit parameter, you can create a launch file like this:
