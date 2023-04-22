@@ -7,7 +7,7 @@ It is important to note that the program included a launch file that facilitates
 
 ## weatherCallback
 
-'''c++
+'''c
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <smart_mobility_service/Weather.h>
