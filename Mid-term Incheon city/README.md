@@ -8,7 +8,7 @@ It is important to note that the program included a launch file that facilitates
 ****weatherCallback****
 
 
-#include <ros/ros.h>
+**#include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <smart_mobility_service/Weather.h>
 
@@ -26,5 +26,5 @@ int main(int argc, char **argv) {
     ros::spin();
 
     return 0;
-}
+}**
 
