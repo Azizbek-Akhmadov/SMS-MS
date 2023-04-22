@@ -1,9 +1,35 @@
 
-The initial functionality offered by the client-and-server nodes in C++ is comparable to the features provided in project #5 of the smart mobility service course. However, in this case, we will develop a service in which the ROS service client node transmits the GPS location of the autonomous vehicle, and the ROS service server returns the current weather status.
+## The first functionality provided by the service's client-and-server nodes in C++ can be implemented using the following steps:
 
-Additionally, the publisher-and-subscriber nodes' second functionality is similar to the exercise project #4 in the smart mobility service course. Nevertheless, we will establish a publisher so that the ROS publisher node can transmit the autonomous vehicle's speed. Consequently, the ROS subscriber (in Python) node will display the plate number of the autonomous vehicle when the vehicle's speed surpasses the speed limit value (speed_limit parameter), which is measured in kilometers per hour (K/H).
+Create a ROS service message that includes the GPS location of the autonomous vehicle. This message should have fields for latitude and longitude.
 
-It is important to note that the program included a launch file that facilitates the automatic execution of the subscriber and publisher nodes while also setting the speed_limit server parameter's value.
+Create a ROS service server node in C++ that listens for incoming service requests. This node should be able to handle the incoming GPS location messages and send a response message back.
+
+Inside the service server node, implement the logic to retrieve the current weather status based on the GPS location received in the request message.
+
+Create a ROS service client node in C++ that sends GPS location messages to the service server node.
+
+Inside the service client node, implement the logic to retrieve the GPS location of the autonomous vehicle.
+
+Use the ROS message passing system to send the GPS location message from the client node to the server node.
+
+Once the server node receives the GPS location message, it should retrieve the current weather status and send it back to the client node using the ROS message passing system.
+
+## The second functionality provided by the publisher-and-subscriber nodes can be implemented using the following steps:
+
+Create a ROS message that includes the speed of the autonomous vehicle. This message should have a field for speed in kilometers per hour (K/H).
+
+Create a ROS publisher node in C++ that publishes speed messages to a specific topic. This node should be able to retrieve the current speed of the vehicle and publish it as a message to the topic.
+
+Create a ROS subscriber node in Python that listens for messages on the same topic as the publisher node.
+
+Inside the subscriber node, implement the logic to echo the plate number of the autonomous vehicle when it receives a speed message.
+
+Add a check to the subscriber node to compare the received speed message to the speed limit value specified in the server parameter.
+
+If the speed exceeds the speed limit value, the subscriber node should output a warning message indicating that the vehicle is exceeding the speed limit.
+
+Create a launch file that sets the value of the speed limit server parameter and starts both the publisher and subscriber nodes automatically.
 
 ## weatherCallback
 
@@ -19,4 +45,4 @@ This code creates a ROS subscriber that listens to the "speed_topic" topic and c
 
 ## speed_limit
 
-To launch the subscriber and publisher nodes, and set the value of the speed_limit parameter, you can create a launch file like this:
+To launch the subscriber and publisher nodes, and set the value of the speed_limit parameter.
