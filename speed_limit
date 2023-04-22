@@ -1,0 +1,3 @@
+<launch>
+    <node name="speed_publisher" pkg="your_package" type="speed_publisher" />
+    <node name="speed_monitor" pkg="your_package" type="speed_monitor.py" output
