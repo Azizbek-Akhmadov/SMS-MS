@@ -1,3 +1,10 @@
+
+
+
+![download](https://github.com/Azizbek-Akhmadov/SMS-MS/assets/81019633/ca862022-e55f-425a-b760-74209e4989b3)
+
+
+
 # ROS NODE
 
 In the above code, I create a MealRecommendationNode class that initializes the ROS node, subscribes to the 'customer_preferences' topic to receive customer preferences, and publishes the recommended meal on the 'meal_recommendation' topic.
