@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+import rospy
+from std_msgs.msg import String
+
+class MealRecommendationNode:
+    def __init__(self):
+        rospy.init_node('meal_recommendation_node')
+        rospy.Subscriber('customer_preferences', String, self.recommend_meal)
+        self.meal_recommendation_pub = rospy.Publisher('meal_recommendation', String, queue_size=10)
+
+    def recommend_meal(self, customer_preferences):
+        # Process customer_preferences and generate meal recommendation
+        recommended_meal = self.generate_recommendation(customer_preferences.data)
+        self.meal_recommendation_pub.publish(recommended_meal)
+
+    def generate_recommendation(self, customer_preferences):
+        # I can implement my recommendation algorithm here
+        # Based on customer_preferences, can match with available meals and return a recommendation
+        recommendation = "Spaghetti Bolognese"  
+
+if __name__ == '__main__':
+    try:
+        node = MealRecommendationNode()
+        rospy.spin()
+    except rospy.ROSInterruptException:
+        pass
