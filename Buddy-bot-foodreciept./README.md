@@ -4,7 +4,7 @@
 ![download](https://github.com/Azizbek-Akhmadov/SMS-MS/assets/81019633/ca862022-e55f-425a-b760-74209e4989b3)
 ![canada-new-food-guide-2019](https://github.com/Azizbek-Akhmadov/SMS-MS/assets/81019633/7e783dc1-470c-4e25-acf8-f334829c83c3)
 
-# Project proposal: 
+# Project Proposal: 
 
 [Buddy bot Azizbek Akhmadov 12200311.pdf](https://github.com/Azizbek-Akhmadov/SMS-MS/files/11645401/Buddy.bot.Azizbek.Akhmadov.12200311.pdf)
 
