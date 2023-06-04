@@ -44,3 +44,7 @@ Item names and their costs in the get_item_cost() method based on my database or
 To use this code, I created a ROS package, add this script to the package's scripts directory, and make it executable. Then, launch the ROS node using rosrun or include it in a launch file along with other necessary nodes.
 
 Publish the selected items as a comma-separated string to the 'selected_items' topic, and the node will calculate the total cost and generate a digital receipt.
+
+# Meal Data
+
+meal_data is a dictionary where each meal item is a key, and its value is another dictionary containing the ingredients and price. selected_items is a list that holds the names of the meal items chosen by the customer.
