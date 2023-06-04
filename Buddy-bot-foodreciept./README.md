@@ -4,6 +4,16 @@
 ![download](https://github.com/Azizbek-Akhmadov/SMS-MS/assets/81019633/ca862022-e55f-425a-b760-74209e4989b3)
 ![canada-new-food-guide-2019](https://github.com/Azizbek-Akhmadov/SMS-MS/assets/81019633/7e783dc1-470c-4e25-acf8-f334829c83c3)
 
+# Project Overview:
+The meal recommendation and receipt project aims to develop a system that assists customers in selecting meals based on their preferences and generates a digital receipt for the chosen items. The system will leverage ROS (Robot Operating System) to integrate with a TurtleBot3 robot and provide a user-friendly interface for customers to interact with.
+
+# Meal Recommendation System:
+
+The meal recommendation system will utilize customer preferences to suggest suitable meals. These preferences can include dietary restrictions, cuisine preferences, ingredient preferences, and nutritional requirements.
+A database will be created to store meal information, including names, descriptions, ingredients, nutritional values, and attributes such as dietary labels.
+An algorithm will be implemented to match customer preferences with available meals. The algorithm will filter out meals that do not meet the customer's requirements and recommend meals that align with their preferences.
+The recommendation system will consider factors like dietary restrictions, preferred cuisine, ingredient preferences, and possibly personalized ranking based on customer history or collaborative filtering techniques.
+
 # Project Proposal: 
 
 [Buddy bot Azizbek Akhmadov 12200311.pdf](https://github.com/Azizbek-Akhmadov/SMS-MS/files/11645401/Buddy.bot.Azizbek.Akhmadov.12200311.pdf)
