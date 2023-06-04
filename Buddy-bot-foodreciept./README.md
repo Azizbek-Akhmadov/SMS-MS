@@ -27,6 +27,6 @@ To implement the get_item_cost() method based on your logic to retrieve the cost
 
 Item names and their costs in the get_item_cost() method based on my database or source of item information.
 
-To use this code, created a ROS package, add this script to the package's scripts directory, and make it executable. Then, launch the ROS node using rosrun or include it in a launch file along with other necessary nodes.
+To use this code, I created a ROS package, add this script to the package's scripts directory, and make it executable. Then, launch the ROS node using rosrun or include it in a launch file along with other necessary nodes.
 
 Publish the selected items as a comma-separated string to the 'selected_items' topic, and the node will calculate the total cost and generate a digital receipt.
