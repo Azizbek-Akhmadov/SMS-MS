@@ -9,3 +9,17 @@ To implement the generate_recommendation() method based on our recommendation al
 I created a ROS package, add this script to the package's scripts directory, and make it executable. Then, launched the ROS node using rosrun or include it in a launch file along with other necessary nodes.
 
  Publish customer preferences to the 'customer_preferences' topic, and the node will generate the meal recommendation and publish it on the 'meal_recommendation' topic. I can subscribe to the 'meal_recommendation' topic in another node to receive the recommendations and further process them or display them to the user.
+ 
+ # ReceiptGenerationNode
+ 
+ I created a ReceiptGenerationNode class that initializes the ROS node and subscribes to the 'selected_items' topic to receive the selected meal items.
+
+The generate_receipt() method is called whenever selected items are received. It splits the selected items string into a list of items, calculates the total cost using the calculate_total_cost() method, and generates a digital receipt using the generate_digital_receipt() method. The receipt is then logged to the console, but you can modify it to publish the receipt to another topic or use it as per your application requirements.
+
+To implement the get_item_cost() method based on your logic to retrieve the cost of an individual item. This method takes in an item name and returns its cost.
+
+Item names and their costs in the get_item_cost() method based on my database or source of item information.
+
+To use this code, created a ROS package, add this script to the package's scripts directory, and make it executable. Then, launch the ROS node using rosrun or include it in a launch file along with other necessary nodes.
+
+Publish the selected items as a comma-separated string to the 'selected_items' topic, and the node will calculate the total cost and generate a digital receipt.
