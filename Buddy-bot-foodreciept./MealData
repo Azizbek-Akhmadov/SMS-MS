@@ -1,0 +1,13 @@
+meal_data = {
+    "Spaghetti Bolognese": {
+        "ingredients": ["spaghetti", "ground beef", "tomato sauce", "onions", "garlic", "herbs", "cheese"],
+        "price": 8.99
+    },
+    "Chicken Curry": {
+        "ingredients": ["chicken", "coconut milk", "curry powder", "onions", "bell peppers", "rice"],
+        "price": 9.99
+    },
+    # Add more meal items and their details here
+}
+
+selected_items = ["Spaghetti Bolognese", "Chicken Curry"]
