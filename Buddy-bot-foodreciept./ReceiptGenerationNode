@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+
+import rospy
+from std_msgs.msg import String
+
+class ReceiptGenerationNode:
+    def __init__(self):
+        rospy.init_node('receipt_generation_node')
+        rospy.Subscriber('selected_items', String, self.generate_receipt)
+
+    def generate_receipt(self, selected_items):
+        items = selected_items.data.split(',')  # Assuming selected items are comma-separated
+        total_cost = self.calculate_total_cost(items)
+        receipt = self.generate_digital_receipt(items, total_cost)
+        rospy.loginfo(receipt)
+
+    def calculate_total_cost(self, items):
+        
+        total_cost = 0.0
+        for item in items:
+            cost = self.get_item_cost(item)
+            total_cost += cost
+        return total_cost
+
+    def get_item_cost(self, item):
+       
+        if item == "Spaghetti Bolognese":
+            return 8.99
+        elif item == "Chicken Curry":
+            return 9.99
+        # Add more items and their costs as per my database
+
+    def generate_digital_receipt(self, items, total_cost):
+        # Format the selected items and total cost into a digital receipt
+        receipt = "Digital Receipt:\n"
+        for item in items:
+            receipt += "- " + item + "\n"
+        receipt += "Total Cost: $" + str(total_cost)
+        return receipt
+
+if __name__ == '__main__':
+    try:
+        node = ReceiptGenerationNode()
+        rospy.spin()
+    except rospy.ROSInterruptException:
+        pass
